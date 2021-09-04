@@ -462,3 +462,12 @@ document.getElementById('start').className = '';
 		Metronome.load();
 	}
 };
+
+var slider = document.getElementById("myRange");
+console.log(slider.value);
+var output = document.getElementById("tempo");
+// Update the current slider value (each time you drag the slider handle)
+slider.oninput = function() {
+output.value = this.value;
+}
+

@@ -13,7 +13,7 @@
 	</head>
 	<body>
 
-<div style="text-align: center; width: 100vw;"><img id="start" tabindex="3" style="position: relative; max-height: 80vh; margin-top: 0px; z-index: 2; transition: all 1s ease-out;" src="gnome.png"></img></div>
+<div style="text-align: center; width: 100vw;"><img id="start" tabindex="3" style="position: relative; max-height: 80vh; margin-top: 0px; z-index: 2; transition: all 1s ease-out;" src="gnome.png"></img>
 <div id="metronome">
 			<div id="tempo-helpers">
 				<button id="third">÷3</button>
@@ -26,18 +26,22 @@
 				<button id="triple">×3</button>
 			</div>
 
-			<div>
-				<input name="tempo" id="tempo" type="number" min="0" step="1" pattern="[0-9]*" inputmode="numeric" title="beats per minute" tabindex="1">
-			</div>
+			
 
 			<div>
-				<label for="time"><input name="time" id="time" pattern="[0-9\+]*" title="e.g. 0 (no grouping), 2, 3+2, 3+5+2" tabindex="2"> beats per measure</label>
+				<label for="time"><input name="time" id="time" pattern="[0-9\+]*" title="e.g. 0 (no grouping), 2, 3+2, 3+5+2" tabindex="2"> beats per bar</label>
 			</div>
 
 			<div id="controls">
-				
+<button id="tap" tabindex="4">TAP</button>
+
+  <div class="slidecontainer">
+  <input type="range" min="40" max="240" value="140" class="slider" id="myRange">
+</div>
+
+				<input name="tempo" id="tempo" type="number" min="0" step="1" pattern="[0-9]*" inputmode="numeric" title="beats per minute" tabindex="1"><label><i> bpm</i></label>
 				<button id="stop" style="display: none;" tabindex="3">stop</button>
-				<button id="tap" tabindex="4">tap</button>
+				
 			</div>
 
 			<div id="visual-target">&nbsp;</div>
@@ -45,6 +49,8 @@
 			<a id="start-tuner" href="#">start tuner</a>
 			<a id="stop-tuner" href="#" style="display: none;">stop tuner</a>
 		</div>
+</div>
+
 <div style="text-align: center; width: 100vw; position: fixed; left: 0px; bottom: 0px;"><img style="width: 100%; opacity: 0.8;" src="greenHill.jpg"></img></div>
 
 

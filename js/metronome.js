@@ -390,7 +390,7 @@ slider.value = Metronome.settings.tempo;
 
 
 		// start/stop
-		document.getElementById('start').onclick = Metronome.start;
+		document.getElementById('gnomeInitiate').onclick = Metronome.start;
 
 
 

@@ -1,0 +1,19 @@
+{
+  "background_color": "#ffffff",
+  "description": "mobile-friendly javascript-powered metronome: visual and audible ticks, complex beat grouping, tap tempo, keyboard shortcuts",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "metrogno",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "metrogno",
+  "start_url": "/",
+  "theme_color": "#ffffff",
+  "icons": [
+    {
+      "src": "images/232x336.png",
+      "type": "image/png",
+      "sizes": "232x336"
+    }
+  ]
+}

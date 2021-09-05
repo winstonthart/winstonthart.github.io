@@ -8,6 +8,49 @@ body {
 	margin: 1em;
 	padding: 0;
 	height: 100%;
+
+
+ background: url("../greenHill.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+background-color: #cccccc;
+
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(38, 166, 91, 0.63);
+}
+
+#pseudo-body {
+display: none;
+z-index:3;
+  content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(38, 166, 91, 1);
+}
+
+.child {
+  width: 300px;
+  height: 100px;
+  padding: 20px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  margin: -70px 0 0 -170px;
 }
 
 input {
@@ -92,7 +135,8 @@ display: none;
 }
 
 #metronome {
-	border: 1px solid #c0c0c0;
+	border-top: 2px solid saddlebrown;
+box-shadow: 5px 10px 14px 16px saddlebrown;
 	background-color: black;
 color: white;
 	text-align: center;
@@ -158,13 +202,36 @@ margin-left: 15px;
 }
 
 .rotatedRight {
-  transform: rotate(45deg); /* Equal to rotateZ(45deg) */
+
+  transform: rotate(20deg); /* Equal to rotateZ(45deg) */
+transition: 0.2s ease;
+-webkit-transform: rotate(20deg); /* Equal to rotateZ(45deg) */
+-moz-transform: rotate(20deg); /* Equal to rotateZ(45deg) */
+-ms-transform: rotate(20deg); /* Equal to rotateZ(45deg) */
+
+transform-origin: bottom;
+-webkit-transform-origin: bottom;
+-moz-transform-origin: bottom;
+-ms-transform-origin: bottom;
+  
 
 }
 
 .rotatedLeft {
- transform: rotate(-45deg); /* Equal to rotateZ(45deg) */
 
+
+ transform: rotate(-20deg); /* Equal to rotateZ(45deg) */
+transition: 0.2s ease;
+-webkit-transform: rotate(-20deg); /* Equal to rotateZ(45deg) */
+-moz-transform: rotate(-20deg); /* Equal to rotateZ(45deg) */
+-ms-transform: rotate(-20deg); /* Equal to rotateZ(45deg) */
+
+transform-origin: bottom;
+-webkit-transform-origin: bottom;
+-moz-transform-origin: bottom;
+-ms-transform-origin: bottom;
+
+  
 }
 
 #start-tuner {

@@ -85,6 +85,10 @@ if(Metronome.beat % 2 == 0) {
 document.getElementById('start').className = 'rotatedRight';
 }
 
+
+
+
+
 		// audio tick
 		osc.connect(Metronome.context.destination);
 		osc.start(Metronome.context.currentTime);
@@ -92,10 +96,26 @@ document.getElementById('start').className = 'rotatedRight';
 
 		if (Metronome.debug) {
 			console.log('tick');
+
+
+
+setTimeout(function(){ 
+
+document.getElementById("pseudo-body").style.display = "none";
+
+}, 500);
+
+
 		}
 	},
 
 	start: function () {
+
+document.getElementById("pseudo-body").style.display = "block";
+
+
+
+
 		// ios does not play html5 audio on a page unless first triggered by a user interaction event like this
 		var osc = Metronome.context.createOscillator();
 		osc.connect(Metronome.context.destination);
@@ -107,6 +127,8 @@ document.getElementById('start').className = 'rotatedRight';
 		}
 		Metronome.interval = window.setInterval(Metronome.tick, (60 / Metronome.settings.tempo) * 1000);
 		
+
+
 		
 
 	},

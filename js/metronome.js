@@ -1,6 +1,6 @@
 /* globals Mousetrap */
 /* exported Metronome */
-
+gnomeStatus = false;
 var Metronome = {
 	interval: null, // used to store the result of setInterval() while ticking
 
@@ -99,22 +99,28 @@ document.getElementById('start').className = 'rotatedRight';
 
 
 
-setTimeout(function(){ 
-
-document.getElementById("pseudo-body").style.display = "none";
-
-}, 500);
-
 
 		}
 	},
 
 	start: function () {
+console.log(gnomeStatus);
 
-document.getElementById("pseudo-body").style.display = "block";
+if (gnomeStatus === true) {
+gnomeStatus = false;
+window.clearInterval(Metronome.interval);
+		Metronome.interval = null;
+		Metronome.beat = 0;
+		document.getElementById('visual-target').innerHTML = '&nbsp;';
+		
+		document.getElementById('stop').style.display = 'none';
+document.getElementById('start').className = '';
+
+} else {
 
 
 
+gnomeStatus = true;
 
 		// ios does not play html5 audio on a page unless first triggered by a user interaction event like this
 		var osc = Metronome.context.createOscillator();
@@ -127,7 +133,7 @@ document.getElementById("pseudo-body").style.display = "block";
 		}
 		Metronome.interval = window.setInterval(Metronome.tick, (60 / Metronome.settings.tempo) * 1000);
 		
-
+}
 
 		
 
@@ -283,6 +289,8 @@ document.getElementById('start').className = '';
 		}
 	},
 
+
+
 	bindControls: function () {
 		var eachRecursive = function (obj, callback) {
 			for (var k in obj) {
@@ -370,8 +378,13 @@ document.getElementById('start').className = '';
 			Metronome.multiplyTime(3);
 		});
 
+
+
 		// start/stop
 		document.getElementById('start').onclick = Metronome.start;
+
+
+
 		document.getElementById('stop').onclick = Metronome.stop;
 
 		// tempo manipulation

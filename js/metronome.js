@@ -30,8 +30,8 @@ var Metronome = {
 		time: 0,
 		duration: 0.02,
 		frequencies: {
-			downbeat: 2500,
-			strong: 2000,
+			downbeat: 200,
+			strong: 120,
 			weak: 1500,
 			tuner: 440
 		}
@@ -77,11 +77,11 @@ var Metronome = {
 		document.getElementById('visual-target').innerHTML = Metronome.beat;
 
 
+
 //check if the number is even
 if(Metronome.beat % 2 == 0) {
     document.getElementById('start').className = 'rotatedLeft';
 } else {
-
 document.getElementById('start').className = 'rotatedRight';
 }
 
@@ -118,7 +118,7 @@ document.getElementById('start').className = '';
 
 } else {
 
-
+document.getElementById('start').className = 'startingGnome';
 
 gnomeStatus = true;
 
@@ -381,7 +381,10 @@ document.getElementById('start').className = '';
 
 
 		// start/stop
-		document.getElementById('start').onclick = Metronome.start;
+		//document.getElementById('start').onclick = Metronome.start;
+document.getElementById('gnomeInitiate').onclick = Metronome.start;
+
+
 
 
 

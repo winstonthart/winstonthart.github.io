@@ -29,6 +29,17 @@ body::before {
     background-color: rgba(38, 166, 91, 0.63);
 }
 
+#gnomeInitiate {
+z-index: 4;
+ content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 100px;
+    left: 0px;
+ opacity: 0;
+}
+
 
 input {
 	text-align: center;
@@ -179,17 +190,18 @@ margin-left: 15px;
 }
 
 .rotatedRight {
-
-  transform: rotate(20deg); /* Equal to rotateZ(45deg) */
-transition: 0.2s ease;
--webkit-transform: rotate(20deg); /* Equal to rotateZ(45deg) */
--moz-transform: rotate(20deg); /* Equal to rotateZ(45deg) */
--ms-transform: rotate(20deg); /* Equal to rotateZ(45deg) */
-
+transition: 0.2s;
 transform-origin: bottom;
 -webkit-transform-origin: bottom;
 -moz-transform-origin: bottom;
 -ms-transform-origin: bottom;
+  transform: rotate(20deg); /* Equal to rotateZ(45deg) */
+
+-webkit-transform: rotate(20deg); /* Equal to rotateZ(45deg) */
+-moz-transform: rotate(20deg); /* Equal to rotateZ(45deg) */
+-ms-transform: rotate(20deg); /* Equal to rotateZ(45deg) */
+
+
   
 
 }
@@ -198,7 +210,7 @@ transform-origin: bottom;
 
 
  transform: rotate(-20deg); /* Equal to rotateZ(45deg) */
-transition: 0.2s ease;
+transition: 0.2s;
 -webkit-transform: rotate(-20deg); /* Equal to rotateZ(45deg) */
 -moz-transform: rotate(-20deg); /* Equal to rotateZ(45deg) */
 -ms-transform: rotate(-20deg); /* Equal to rotateZ(45deg) */
@@ -209,6 +221,22 @@ transform-origin: bottom;
 -ms-transform-origin: bottom;
 
   
+}
+
+.startingGnome {
+transform: scale(1.2); rotate(-20deg); /* Equal to rotateZ(45deg) */
+transition: 0.2s;
+-webkit-transform: scale(1.2); rotate(-20deg); /* Equal to rotateZ(45deg) */
+-moz-transform: rotate(-20deg); /* Equal to rotateZ(45deg) */
+-ms-transform: rotate(-20deg); /* Equal to rotateZ(45deg) */
+
+transform-origin: bottom;
+-webkit-transform-origin: bottom;
+-moz-transform-origin: bottom;
+-ms-transform-origin: bottom;
+
+
+
 }
 
 #start-tuner {

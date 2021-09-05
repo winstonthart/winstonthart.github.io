@@ -40,6 +40,19 @@ z-index: 4;
  opacity: 0;
 }
 
+#gnomeSettings {
+display: none;
+z-index: 5;
+ content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+background-color: rgba(38, 166, 91, 0.63);
+}
+
+
 
 input {
 	text-align: center;
@@ -68,9 +81,7 @@ button#minus1 {
 	display: none;
 }
 
-#metronome-advanced-controls {
-display: none;
-}
+
 
 #metronome-advanced-controls button {
 	display: block;
@@ -177,17 +188,7 @@ margin-left: 15px;
 	font-weight: bolder;
 }
 
-@media(max-width: 768px) {
-	#metronome {
-		border-width: 0px;
-	}
-	#options {
-		display: none;
-	}
-	#metronome-advanced-controls {
-		display: none;
-	}
-}
+
 
 .rotatedRight {
 transition: 0.2s;
@@ -281,4 +282,38 @@ display: inline-block;
   border-radius: 50%;
   background: #04AA6D;
   cursor: pointer;
+}
+
+
+.container {
+  display: inline-block;
+  cursor: pointer;
+position: fixed;
+z-index: 6;
+
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+  transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+  opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+  transform: rotate(45deg) translate(-8px, -8px) ;
 }

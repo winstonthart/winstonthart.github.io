@@ -20,57 +20,21 @@
 		<link rel="icon" type="image/png" href="favicon.png" />
 	</head>
 	<body>
-
-
-<div id="gnomeInitiate"></div>
-<div style="width: 100vw; text-align: center; position: fixed; bottom: 200px; z-index: 2;"><img id="start" tabindex="3" class="rotatedLeft" style="width: auto; max-width: 100%; z-index: 2;" src="gnome.png"></img>
-
+<div class="container" onclick="myFunction(this)">
+  <div class="bar1"></div>
+  <div class="bar2"></div>
+  <div class="bar3"></div>
 </div>
-<div style="width: 100vw; text-align: center; position: fixed; bottom: 55px; left: 3px;">
-<img style="height: 24vh;" src="gnomeFeet.png"></img></div>
-<div id="metronome">
-			<div id="tempo-helpers">
-				<button id="third">÷3</button>
-				<button id="halve">÷2</button>
-				<button id="minus10">-10</button>
-				<button id="minus1">-1</button>
-				<button id="plus1">+1</button>
-				<button id="plus10">+10</button>
-				<button id="double">×2</button>
-				<button id="triple">×3</button>
-			</div>
 
-			
-
-			<div style="display: none;">
+<div id="gnomeSettings">
+<div id="metronome-advanced-controls">
+<br>
+<br>
+<br>
+<br>
+<div>
 				<label for="time"><input name="time" id="time" pattern="[0-9\+]*" title="e.g. 0 (no grouping), 2, 3+2, 3+5+2" tabindex="2"> beats per bar</label>
 			</div>
-
-			<div id="controls">
-<button id="tap" tabindex="4">TAP</button>
-
-  <div class="slidecontainer">
-  <input type="range" min="40" max="240" value="140" class="slider" id="myRange">
-</div>
-
-				<input name="tempo" id="tempo" type="number" min="0" step="1" pattern="[0-9]*" inputmode="numeric" title="beats per minute" tabindex="1"><label><i> bpm</i></label>
-				<button id="stop" style="display: none;" tabindex="3">stop</button>
-				
-			</div>
-
-			<div id="visual-target">&nbsp;</div>
-
-			<a id="start-tuner" href="#">start tuner</a>
-			<a id="stop-tuner" href="#" style="display: none;">stop tuner</a>
-		</div>
-</div>
-
-
-
-
-
-
-		<div id="metronome-advanced-controls">
 			<button id="popout">small window popout</button>
 			<button id="randomize-tempo">randomize tempo</button>
 			<button id="randomize-time">randomize beats per measure</button>
@@ -152,6 +116,55 @@
 				<p><a href="https://thenounproject.com/andrea.verzola1/uploads/?i=173952">favicon by Andrea Verzola from the Noun Project</a></p>
 			</div>
 		</div>
+</div>
+
+<div id="gnomeInitiate"></div>
+<div style="width: 100vw; text-align: center; position: fixed; bottom: 200px; z-index: 2;"><img id="start" tabindex="3" class="rotatedLeft" style="width: auto; max-width: 100%; z-index: 2;" src="gnome.png"></img>
+
+</div>
+<div style="width: 100vw; text-align: center; position: fixed; bottom: 55px; left: 3px;">
+<img style="height: 24vh;" src="gnomeFeet.png"></img></div>
+<div id="metronome">
+			<div id="tempo-helpers">
+				<button id="third">÷3</button>
+				<button id="halve">÷2</button>
+				<button id="minus10">-10</button>
+				<button id="minus1">-1</button>
+				<button id="plus1">+1</button>
+				<button id="plus10">+10</button>
+				<button id="double">×2</button>
+				<button id="triple">×3</button>
+			</div>
+
+			
+
+			
+
+			<div id="controls">
+<button id="tap" tabindex="4">TAP</button>
+
+  <div class="slidecontainer">
+  <input type="range" min="40" max="240" value="140" class="slider" id="myRange">
+</div>
+
+				<input name="tempo" id="tempo" type="number" min="0" step="1" pattern="[0-9]*" inputmode="numeric" title="beats per minute" tabindex="1"><label><i> bpm</i></label>
+				<button id="stop" style="display: none;" tabindex="3">stop</button>
+				
+			</div>
+
+			<div id="visual-target">&nbsp;</div>
+
+			<a id="start-tuner" href="#">start tuner</a>
+			<a id="stop-tuner" href="#" style="display: none;">stop tuner</a>
+		</div>
+</div>
+
+
+
+
+
+
+		
 
 		
 

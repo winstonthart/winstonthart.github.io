@@ -239,19 +239,28 @@ document.getElementById('start').className = '';
 	},
 
 	parseTempo: function () {
-		if (parseInt(Metronome.inputs.tempo.value) > 0) {
+		if (parseInt(Metronome.inputs.tempo.value) > 39 && parseInt(Metronome.inputs.tempo.value) < 241) {
+document.getElementById("tempo").style.color = 'white';
 			Metronome.inputs.tempo.value = Metronome.settings.tempo = parseInt(Metronome.inputs.tempo.value);
 			if (Metronome.interval) {
 				Metronome.start();
 			}
 		} else {
-			if (Metronome.debug) {
-				console.warn('tempo must be positive');
-			}
+			
+document.getElementById("tempo").style.color = 'red';
+console.warn('tempo must be between 40 & 240 bpm!');
+
+				
+			
 		}
 		if (Metronome.debug) {
 			console.log('tempo', Metronome.settings.tempo);
-		}
+var slider = document.getElementById("myRange");
+slider.value = Metronome.settings.tempo;
+
+
+}
+		
 	},
 
 	parseFrequencies: function () {
@@ -307,6 +316,9 @@ document.getElementById('start').className = '';
 		eachRecursive(Metronome.inputs, function (input) {
 			input.onkeyup = Metronome.save; // for typing directly into the input
 			input.onchange = Metronome.save; // for type=number controls & mobile
+
+
+
 		});
 
 		Mousetrap.bindGlobal('.', function (e) {
@@ -322,12 +334,9 @@ document.getElementById('start').className = '';
 			Metronome.inputs.time.focus();
 		});
 		Mousetrap.bindGlobal('space', function (e) { // start if stopped; stop if started
-			e.preventDefault();
-			if (Metronome.interval) {
-				Metronome.stop();
-			} else {
+		
 				Metronome.start();
-			}
+			
 		});
 		Mousetrap.bindGlobal('u', function (e) { // start if stopped; stop if started
 			e.preventDefault();
@@ -381,10 +390,7 @@ document.getElementById('start').className = '';
 
 
 		// start/stop
-		//document.getElementById('start').onclick = Metronome.start;
-document.getElementById('gnomeInitiate').onclick = Metronome.start;
-
-
+		document.getElementById('start').onclick = Metronome.start;
 
 
 
@@ -455,6 +461,7 @@ document.getElementById('gnomeInitiate').onclick = Metronome.start;
 
 		if (Metronome.debug) {
 			console.log('saved', Metronome.settings);
+			Metronome.start();
 		}
 	},
 
@@ -508,5 +515,20 @@ var output = document.getElementById("tempo");
 slider.oninput = function() {
 output.value = this.value;
 Metronome.save();
+}
+
+var gnomeAdvanced = true;
+function myFunction(x) {
+  x.classList.toggle("change");
+
+if (gnomeAdvanced === true) {
+document.getElementById('gnomeSettings').style.display = 'block';
+gnomeAdvanced = false;
+} else {
+document.getElementById('gnomeSettings').style.display = 'none';
+gnomeAdvanced = true;
+}
+
+
 }
 

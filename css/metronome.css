@@ -42,6 +42,7 @@ z-index: 4;
 
 #gnomeSettings {
 display: none;
+padding: 20px;
 z-index: 5;
  content: "";
     position: absolute;

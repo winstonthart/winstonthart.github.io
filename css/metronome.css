@@ -26,7 +26,7 @@ body::before {
     right: 0px;
     bottom: 0px;
     left: 0px;
-    background-color: rgba(38, 166, 91, 0.63);
+    background-color: rgba(38, 166, 91, 0.9);
 }
 
 #gnomeInitiate {
@@ -45,12 +45,14 @@ display: none;
 padding: 20px;
 z-index: 5;
  content: "";
-    position: absolute;
+    position: fixed;
     top: 0px;
     right: 0px;
     bottom: 0px;
     left: 0px;
-background-color: rgba(38, 166, 91, 0.63);
+background-color: rgba(38, 166, 91, 0.9);
+overflow: scroll;
+
 }
 
 
@@ -58,7 +60,8 @@ background-color: rgba(38, 166, 91, 0.63);
 input {
 	text-align: center;
 	
-padding: 5px;
+padding: 15px;
+margin: 2px;
 background-color: black;
 border-style: none;
 color: white;
@@ -66,13 +69,16 @@ color: white;
 
 
 
+
+
 button {
+padding: 15px;
 	border-style: solid;
 border-color: #04AA6D;
 cursor: pointer;
 	background-color: black;
 color: white;
-	padding: 5px;
+	
 }
 
 
@@ -98,7 +104,7 @@ button#minus1 {
 
 .reference {
 	font-size: 0.75em;
-	color: #a0a0a0;
+
 }
 
 .reference dd:after {
@@ -167,8 +173,14 @@ display: none;
 #tempo {
 	font-size: 2em;
 	width: 2.5em;
-margin-left: 15px;
+margin: 0px;
+padding: 0px;
 
+
+}
+
+#tap {
+margin-right: 5px;
 }
 
 #time {
@@ -265,6 +277,8 @@ display: inline-block;
   opacity: 0.7;
   -webkit-transition: .2s;
   transition: opacity .2s;
+padding: 0px;
+margin: 0px;
 }
 
 .slider::-webkit-slider-thumb {

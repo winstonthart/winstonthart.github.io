@@ -33,11 +33,11 @@
 <br>
 <br>
 <div>
-				<label for="time"><input name="time" id="time" pattern="[0-9\+]*" title="e.g. 0 (no grouping), 2, 3+2, 3+5+2" tabindex="2"> beats per bar</label>
+				<input name="time" id="time" pattern="[0-9\+]*" title="e.g. 0 (no grouping), 2, 3+2, 3+5+2" tabindex="2"><label for="time"> beats per bar</label>
 			</div>
 			<button style="display: none;" id="popout">small window popout</button>
 			<button id="randomize-tempo">randomize tempo</button>
-			<button id="randomize-time">randomize beats per measure</button>
+			<button id="randomize-time">randomize beats per bar</button>
 			<button id="randomize-both">randomize both</button>
 			<div>
 				<label for="duration">duration</label>
@@ -55,17 +55,17 @@
 				<label for="frequency-weak">weak beat</label>
 				<input name="frequency-weak" id="frequency-weak" type="number" min="0"> Hz
 			</div>
-			<div>
+			<div style="display: none;">
 				<label for="frequency-tuner">tuner</label>
 				<input name="frequency-tuner" id="frequency-tuner" type="number" min="0"> Hz
 			</div>
 
-			<p><input type="checkbox" id="multiply_time"> <label for="multiply_time">tempo buttons affect time</label></p>
+			<p style="display: none;"><input type="checkbox" id="multiply_time"> <label for="multiply_time">tempo buttons affect time</label></p>
 
 			<p><a id="reset" href="#">reset to defaults</a></p>
 
 			<div class="reference">
-				<p>beats per measure can be either of the following:</p>
+				<p>beats per bar can be either of the following:</p>
 
 				<ul>
 					<li>empty or <code>0</code> (no groups)</li>
@@ -109,11 +109,11 @@
 					<dt>t</dt>
 					<dd>focus tempo</dd>
 
-					<dt>u</dt>
+					<dt style="display: none;">u</dt>
 					<dd>start/stop tuner</dd>
 				</dl>
 
-				<p><a href="https://thenounproject.com/andrea.verzola1/uploads/?i=173952">favicon by Andrea Verzola from the Noun Project</a></p>
+				
 			</div>
 		</div>
 </div>

@@ -30,8 +30,8 @@ var Metronome = {
 		time: 0,
 		duration: 0.02,
 		frequencies: {
-			downbeat: 200,
-			strong: 120,
+			downbeat: 750,
+			strong: 900,
 			weak: 1500,
 			tuner: 440
 		}
@@ -76,13 +76,12 @@ var Metronome = {
 		// visual tick
 		document.getElementById('visual-target').innerHTML = Metronome.beat;
 
-
-
-//check if the number is even
-if(Metronome.beat % 2 == 0) {
-    document.getElementById('start').className = 'rotatedLeft';
-} else {
-document.getElementById('start').className = 'rotatedRight';
+//makes the gnome toggle between the left and right of the screen
+if(document.getElementById("start").className == "rotatedRight") {
+   document.getElementById("start").className = "rotatedLeft";
+}
+else {
+   document.getElementById("start").className = "rotatedRight";
 }
 
 
@@ -192,7 +191,7 @@ document.getElementById('start').className = '';
 
 		switch (input) {
 			case Metronome.inputs.tempo:
-				Metronome.inputs.tempo.value = getRandomInt(60, 600);
+				Metronome.inputs.tempo.value = getRandomInt(40, 240);
 				break;
 			case Metronome.inputs.time:
 				Metronome.inputs.time.value = (function () {

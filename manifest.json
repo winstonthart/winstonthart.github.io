@@ -3,10 +3,10 @@
   "description": "mobile-friendly javascript-powered metronome: visual and audible ticks, complex beat grouping, tap tempo, keyboard shortcuts",
   "dir": "ltr",
   "display": "standalone",
-  "name": "metrogno",
-  "orientation": "any",
+  "name": "MetroGnome",
+  "orientation": "Portrait",
   "scope": "/",
-  "short_name": "metrogno",
+  "short_name": "MetroGnome",
   "start_url": "/",
   "theme_color": "#ffffff",
   "icons": [

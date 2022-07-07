@@ -202,9 +202,13 @@ margin-right: 5px;
 }
 
 
+:root {
+  --gnome_speed: 0.2s;
+}
+
 
 .rotatedRight {
-transition: 0.2s;
+transition: var(--gnome_speed);
 transform-origin: bottom;
 -webkit-transform-origin: bottom;
 -moz-transform-origin: bottom;
@@ -224,7 +228,7 @@ transform-origin: bottom;
 
 
  transform: rotate(-20deg); /* Equal to rotateZ(45deg) */
-transition: 0.2s;
+transition: var(--gnome_speed);
 -webkit-transform: rotate(-20deg); /* Equal to rotateZ(45deg) */
 -moz-transform: rotate(-20deg); /* Equal to rotateZ(45deg) */
 -ms-transform: rotate(-20deg); /* Equal to rotateZ(45deg) */

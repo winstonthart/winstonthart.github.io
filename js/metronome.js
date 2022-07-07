@@ -242,6 +242,12 @@ document.getElementById('start').className = '';
 document.getElementById("tempo").style.color = 'white';
 			Metronome.inputs.tempo.value = Metronome.settings.tempo = parseInt(Metronome.inputs.tempo.value);
 			if (Metronome.interval) {
+
+
+
+				document.documentElement.style.setProperty('--gnome_speed', 1.125-0.00386905*Metronome.inputs.tempo.value + "s");
+
+
 				Metronome.start();
 			}
 		} else {
